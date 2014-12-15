@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'departments#index'
 
   resources :departments
-  resources :projects
+  resources :projects do
+    resources :user_stories
+  end 
 end
