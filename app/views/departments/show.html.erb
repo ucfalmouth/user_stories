@@ -1,0 +1,4 @@
+<h1><%= @department.name %></h1>
+<% @department.projects.each do |project| %>
+  <%= link_to project.name, project %>
+<% end %>

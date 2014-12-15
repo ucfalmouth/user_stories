@@ -13,4 +13,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
+gem 'devise'
+
+
 gem 'spring',        group: :development
