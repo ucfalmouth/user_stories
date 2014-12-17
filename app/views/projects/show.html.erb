@@ -1,5 +1,9 @@
-<%= @project.name %>
-<%= @project.goal %>
-<%= @project.department.name %>
-
-<%= render 'user_storys/user_storys' %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= @project.name %><br>
+    <%= @project.goal %><br>
+    <%= @project.department.name %>
+  </div>
+</div>
+<br>
+<%= render 'user_stories/user_stories' %>

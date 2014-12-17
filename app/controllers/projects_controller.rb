@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   def show
+    @user_story = UserStory.new
     @project = find_project
   end
 

@@ -1,4 +1,23 @@
-<h1><%= @department.name %></h1>
-<% @department.projects.each do |project| %>
-  <%= link_to project.name, project %>
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1><%= @department.name %></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <% @department.projects.each do |project| %>
+    <div class="card">
+      <div class="card_media-project">
+        <h3 class="card_headline"><%= project.name %></h3>
+      </div>
+      <div class="card_body_project">
+        <p>Have <%= project.goal %></p>
+      </div>
+      <footer class="card_footer">
+        <%= link_to "VIEW", project %>
+      </footer>
+    </div>
+    <% end %>
+  </div>
+</div>

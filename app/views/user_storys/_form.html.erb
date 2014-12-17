@@ -1,0 +1,9 @@
+<%= simple_form_for ([@project, @user_story] ) do |f| %>
+<%= f.input :actor %>
+<%= f.text_area :narrative %>
+<%= f.text_area :goal %>
+<div>
+</br>
+<%= f.submit  %>
+</div>
+<% end %>

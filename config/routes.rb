@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :departments
   resources :projects do
     resources :user_stories
-  end 
+  end
+  resources :user_stories
 end
