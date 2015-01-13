@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.1'
+gem 'bootswatch-rails'
 
 
 

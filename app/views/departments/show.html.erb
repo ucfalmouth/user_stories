@@ -1,23 +1,15 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h1><%= @department.name %></h1>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <% @department.projects.each do |project| %>
-    <div class="card">
-      <div class="card_media-project">
-        <h3 class="card_headline"><%= project.name %></h3>
+  <% @department.projects.each do |project| %>
+  <div class="col-md-3">
+    <div class=" panel panel-default project-panel">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= truncate(project.goal, :length => 20) %></h3>
       </div>
-      <div class="card_body_project">
-        <p>Have <%= project.goal %></p>
+      <div class="panel-body">
+        <p><%= truncate(project.goal, :length => 50) %></p>
+        <%= link_to "VIEW", project, class: "btn btn-primary pull-right" %>
       </div>
-      <footer class="card_footer">
-        <%= link_to "VIEW", project %>
-      </footer>
     </div>
-    <% end %>
   </div>
+  <% end %>
 </div>
