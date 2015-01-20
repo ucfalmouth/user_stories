@@ -1,0 +1,6 @@
+<%= simple_form_for(@user_story, html: {class: 'form' }) do |f| %>
+<%= f.input :actor, collection: ["Student", "Staff"], :input_html => {:cols => 31}  %>
+<%= f.input :narrative, placeholder: 'I want to be able to ....', :input_html => {:cols => 31} %></br>
+<%= f.input :goal, placeholder: 'So that I can ....', :input_html => {:cols => 31} %></br>
+<%= f.submit "Add", class: "btn btn-primary btn-lg" %>
+<% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'departments#index'
+  root 'projects#index'
 
   resources :departments
   resources :projects do

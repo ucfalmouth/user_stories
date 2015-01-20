@@ -1,7 +1,72 @@
 @import "bootstrap-sprockets";
 @import "bootswatch/paper/variables";
 
-
+p {
+  font-size: 16px;
+}
 
 @import "bootstrap";
 @import "bootswatch/paper/bootswatch";
+
+$black: #333;
+$gray: #ccc;
+$gray--light: lighten($gray, 10%);
+$blue: #09c;
+$blue--light: lighten($blue, 10%);
+
+.project-container {
+  text-align: center;
+}
+
+.form{
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  border: 1px solid $gray;
+  padding: 2em;
+  width: 90%;
+  max-width: 960px;
+  box-shadow: 0 5px 10px rgba($black, 0.3);
+}
+
+label{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+
+input{
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.6em;
+  border: none;
+  border-bottom: 1px solid $gray;
+  transition: all .4s;
+
+  &:focus{
+    background-color: $gray--light;
+    border-color: $blue;
+    outline: none;
+  }
+}
+
+button{
+  display: block;
+  padding: 0.5em 1.5em;
+  background: $blue;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  text-transform: uppercase;
+  transition: all .4s;
+
+  &:hover,
+  &:focus{
+    background-color: $blue--light;
+  }
+}

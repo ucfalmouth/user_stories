@@ -18,6 +18,9 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'bootswatch-rails'
 
-
+group :development, :test do
+  gem 'capybara'
+  gem 'rspec-rails', '~> 3.0'
+end
 
 gem 'spring',        group: :development

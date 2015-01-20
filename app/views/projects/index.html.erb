@@ -1,0 +1,15 @@
+<div class="row">
+  <% @project.each do |project| %>
+  <div class="col-md-4">
+    <div class=" panel panel-default project-panel">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= project.name %></h3>
+      </div>
+      <div class="panel-body">
+        <p><%= truncate(project.goal, :length => 80) %></p>
+        <%= link_to "VIEW", project, class: "btn btn-primary pull-right" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
