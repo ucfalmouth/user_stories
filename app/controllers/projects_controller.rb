@@ -1,11 +1,13 @@
 class ProjectsController < ApplicationController
 
   def index
-    @project = Project.all
+    @projects = Project.all
   end
+
   def show
-    @user_story = UserStory.new
     @project = find_project
+    @user_story = UserStory.new
+    @user_stories = @project.user_stories
   end
 
   def new
@@ -37,7 +39,7 @@ class ProjectsController < ApplicationController
         redirect_to @project
       else
         redirect_to @project
-      end 
+      end
   end
 
   private

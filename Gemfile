@@ -21,6 +21,10 @@ gem 'bootswatch-rails'
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
+
+gem 'simplecov', :require => false, :group => :test
 
 gem 'spring',        group: :development
